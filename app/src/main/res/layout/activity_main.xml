@@ -8,20 +8,22 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_dark_background"
+        android:background="@color/gray"
         android:text="0"
         android:textColor="@color/white"
         android:gravity="right|center"
         android:textSize="40dp"
-        android:inputType="textPersonName"
         android:layout_weight="1"
+        android:inputType="textMultiLine"
          />
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
 
         <TableRow
             android:layout_width="match_parent"
@@ -30,42 +32,262 @@
             <Button
                 android:id="@+id/btnAC"
                 android:text="AC"
+                android:onClick="clearEvent"
                 android:layout_marginRight="1pt"
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:layout_weight="1"
-                android:background="@color/blueback"
-                ></Button>
+                android:layout_marginBottom="1pt"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
             <Button
                 android:id="@+id/btnPlusMin"
                 android:text="+/-"
+                android:onClick="numberEvent"
                 android:layout_marginRight="1pt"
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:layout_weight="1"
-                android:background="@color/blueback"
-                ></Button>
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
             <Button
                 android:id="@+id/btnDiv"
                 android:text="/"
+                android:onClick="opEvent"
                 android:layout_marginRight="1pt"
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:layout_weight="1"
-                android:background="@color/blueback"
-                ></Button>
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
             <Button
                 android:id="@+id/btnMul"
                 android:text="*"
+                android:onClick="opEvent"
                 android:layout_marginRight="1pt"
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:layout_weight="1"
                 android:background="@color/blueback"
-                ></Button>
+                android:textSize="20dp"
+                />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:id="@+id/btn7"
+                android:text="7"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:layout_marginBottom="1pt"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn8"
+                android:text="8"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn9"
+                android:text="9"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btnMod"
+                android:text="%"
+                android:onClick="perEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                android:textSize="20dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:id="@+id/btn4"
+                android:text="4"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn5"
+                android:text="5"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:layout_marginBottom="1pt"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn6"
+                android:text="6"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btnMin"
+                android:text="-"
+                android:onClick="opEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                android:textSize="20dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:id="@+id/btn1"
+                android:text="1"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:layout_marginBottom="1pt"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn2"
+                android:text="2"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btn3"
+                android:text="3"
+                android:onClick="numberEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:background="@color/gray"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/btnPul"
+                android:text="+"
+                android:onClick="opEvent"
+                android:layout_marginRight="1pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:background="@color/blueback"
+                />
+        </TableRow>
     </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <Button
+                    android:id="@+id/btn0"
+                    android:text="0"
+                    android:onClick="numberEvent"
+                    android:layout_marginRight="1pt"
+                    android:layout_height="30pt"
+                    android:layout_width="30pt"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/purple_700"
+                    android:background="@color/gray"
+                    android:textSize="20dp"
+                    />
+                <Button
+                    android:id="@+id/btnDot"
+                    android:text="."
+                    android:layout_marginRight="1pt"
+                    android:layout_height="30pt"
+                    android:layout_width="30pt"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/purple_700"
+                    android:background="@color/gray"
+                    android:textSize="20dp"
+                    />
+                <Button
+                    android:id="@+id/btnEqul"
+                    android:text="="
+                    android:onClick="equlEvent"
+                    android:layout_marginRight="1pt"
+                    android:layout_height="30pt"
+                    android:layout_width="30pt"
+                    android:layout_weight="1"
+                    android:background="@color/blueback"
+                    android:textSize="20dp"
+                    />
+            </TableRow>
+    </LinearLayout>
+
 
 
 </LinearLayout>
